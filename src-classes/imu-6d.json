@@ -1,0 +1,45 @@
+{
+  "imu-6d": {
+    "description": "To record a 6 degrees of freedom Intertial Measurement Unit (IMU) measurement",
+    "formats": {
+      "mg-mdps": {
+        "description": "Linear accelerations are stored in milli-g (mg) and angular velocities in milledegrees per second (mdps)",
+	    "type": "object",
+	    "properties": {
+		  "linear-x": {
+            "description": "Value of the linear x axis. Unit: mg",
+            "type": "number"
+          },
+          "linear-y": {
+            "description": "Value of the linear y axis. Unit: mg",
+            "type": "number"
+          },
+          "linear-z": {
+            "description": "Value of the linear z axis. Unit: mg",
+            "type": "number"
+          },
+          "angular-x": {
+            "description": "Value of the rotational x axis. Unit: mdps",
+            "type": "number"
+          },
+          "angular-y": {
+            "description": "Value of the rotational y axis. Unit: mdps",
+            "type": "number"
+          },
+          "angular-z": {
+            "description": "Value of the rotational z axis. Unit: mdps",
+            "type": "number"
+          }
+		},
+        "required": [
+          "linear-x",
+          "linear-y",
+          "linear-z",
+          "angular-x",
+          "angular-y",
+          "angular-z"
+        ]
+      }
+    }
+  }
+}

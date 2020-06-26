@@ -1,0 +1,46 @@
+{
+  "record": {
+    "description": "A record is a grouping of events associated to the same measurement",
+    "formats": {
+      "references": {
+        "description": "Grouping of events identified by their references",
+        "type": "object",
+        "properties": {
+          "ecg": {
+            "description": "Reference to the electrocardiogram event",
+            "type": "string"
+          },
+          "scg": {
+            "description": "Reference to the seismocardiogram event",
+            "type": "string"
+          },
+          "bcg": {
+            "description": "Reference to the ballisotcardiogram event",
+            "type": "string"
+          },
+          "weight": {
+            "description": "Reference to the weight event",
+            "type": "string"
+          },
+          "bloodPressure": {
+            "description": "Reference to the blood pressure event",
+            "type": "string"
+          },
+          "phone": {
+            "description": "Reference to the phone paramaters event",
+            "type": "string"
+          },
+          "kino": {
+            "description": "Reference to the kino device parameters event",
+            "type": "string"
+          }
+        },
+        "required": [
+          "scg",
+          "weight",
+          "phone"
+        ]
+      }
+    }
+  }
+}

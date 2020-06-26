@@ -1,0 +1,68 @@
+{
+  "device-parameters": {
+    "description": "Collection of information about the device used to perform a measurement",
+    "formats": {
+      "phone": {
+        "description": "Information about the phone used to collect the data",
+        "type": "object",
+        "properties": {
+          "brand": {
+            "description": "The brand of the the phone (Apple, Samsung, Huawei, ...)",
+            "type": "string"
+          },
+          "model": {
+            "description": "The model of the phone (iPhone X, Galaxy S10, ...)",
+            "type": "string"
+          },
+          "operatingSystem": {
+            "description": "The OS of the phone (iOS, Android)",
+            "type": "string"
+          },
+          "operatingSystemVersion": {
+            "description": "The version of the OS",
+            "type": "string"
+          },
+          "applicationId": {
+            "description": "The internal ID of the application",
+            "type": "string"
+          },
+          "applicationVersion": {
+            "description": "The version of the application",
+            "type": "string"
+          }
+        },
+        "required": [
+          "brand",
+          "model",
+          "operatingSystem",
+          "operatingSystemVersion",
+          "applicationId",
+          "applicationVersion"
+        ]
+      },
+      "kino": {
+        "description": "Information about the Kino device used to collect the data",
+        "type": "object",
+        "properties": {
+          "serialNumber": {
+            "description": "The serial number of the device",
+            "type": "string"
+          },
+          "hardwareVersion": {
+            "description": "The version of the hardware",
+            "type": "string"
+          },
+          "firmwareVersion": {
+            "description": "The version of the firmware",
+            "type": "string"
+          }
+        },
+        "required": [
+          "serialNumber",
+          "hardwareVersion",
+          "softwareVersion"
+        ]
+      }
+    }
+  }
+}
