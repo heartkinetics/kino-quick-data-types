@@ -211,6 +211,67 @@
       "description": "Milligrams per deciliter",
       "type": "number"
     },
+    "device-parameters/phone": {
+      "description": "Information about the phone used to collect the data",
+      "type": "object",
+      "properties": {
+        "brand": {
+          "description": "The brand of the the phone (Apple, Samsung, Huawei, ...)",
+          "type": "string"
+        },
+        "model": {
+          "description": "The model of the phone (iPhone X, Galaxy S10, ...)",
+          "type": "string"
+        },
+        "operatingSystem": {
+          "description": "The OS of the phone (iOS, Android)",
+          "type": "string"
+        },
+        "operatingSystemVersion": {
+          "description": "The version of the OS",
+          "type": "string"
+        },
+        "applicationId": {
+          "description": "The internal ID of the application",
+          "type": "string"
+        },
+        "applicationVersion": {
+          "description": "The version of the application",
+          "type": "string"
+        }
+      },
+      "required": [
+        "brand",
+        "model",
+        "operatingSystem",
+        "operatingSystemVersion",
+        "applicationId",
+        "applicationVersion"
+      ]
+    },
+    "device-parameters/kino": {
+      "description": "Information about the Kino device used to collect the data",
+      "type": "object",
+      "properties": {
+        "serialNumber": {
+          "description": "The serial number of the device",
+          "type": "string"
+        },
+        "hardwareVersion": {
+          "description": "The version of the hardware",
+          "type": "string"
+        },
+        "firmwareVersion": {
+          "description": "The version of the firmware",
+          "type": "string"
+        }
+      },
+      "required": [
+        "serialNumber",
+        "hardwareVersion",
+        "softwareVersion"
+      ]
+    },
     "dynamic-viscosity/pa-s": {
       "description": "Pascal second",
       "type": "number"
@@ -366,6 +427,44 @@
     "frequency/uhz": {
       "description": "Microhertz",
       "type": "number"
+    },
+    "imu-6d/mg-mdps": {
+      "description": "Linear accelerations are stored in milli-g (mg) and angular velocities in milledegrees per second (mdps)",
+      "type": "object",
+      "properties": {
+        "linear-x": {
+          "description": "Value of the linear x axis. Unit: mg",
+          "type": "number"
+        },
+        "linear-y": {
+          "description": "Value of the linear y axis. Unit: mg",
+          "type": "number"
+        },
+        "linear-z": {
+          "description": "Value of the linear z axis. Unit: mg",
+          "type": "number"
+        },
+        "angular-x": {
+          "description": "Value of the rotational x axis. Unit: mdps",
+          "type": "number"
+        },
+        "angular-y": {
+          "description": "Value of the rotational y axis. Unit: mdps",
+          "type": "number"
+        },
+        "angular-z": {
+          "description": "Value of the rotational z axis. Unit: mdps",
+          "type": "number"
+        }
+      },
+      "required": [
+        "linear-x",
+        "linear-y",
+        "linear-z",
+        "angular-x",
+        "angular-y",
+        "angular-z"
+      ]
     },
     "length/cm": {
       "description": "Centimeters",
@@ -1380,6 +1479,45 @@
     "ratio/percent": {
       "description": "A percentage value.",
       "type": "number"
+    },
+    "record/references": {
+      "description": "Grouping of events identified by their references",
+      "type": "object",
+      "properties": {
+        "ecg": {
+          "description": "Reference to the electrocardiogram event",
+          "type": "string"
+        },
+        "scg": {
+          "description": "Reference to the seismocardiogram event",
+          "type": "string"
+        },
+        "bcg": {
+          "description": "Reference to the ballisotcardiogram event",
+          "type": "string"
+        },
+        "weight": {
+          "description": "Reference to the weight event",
+          "type": "string"
+        },
+        "bloodPressure": {
+          "description": "Reference to the blood pressure event",
+          "type": "string"
+        },
+        "phone": {
+          "description": "Reference to the phone paramaters event",
+          "type": "string"
+        },
+        "kino": {
+          "description": "Reference to the kino device parameters event",
+          "type": "string"
+        }
+      },
+      "required": [
+        "scg",
+        "weight",
+        "phone"
+      ]
     },
     "speed/ft-m": {
       "description": "Feet/minute",
@@ -3341,6 +3479,9 @@
         }
       }
     },
+    "device-parameters": {
+      "description": "Collection of information about the device used to perform a measurement"
+    },
     "dynamic-viscosity": {
       "description": "The resistance to flow of a fluid under an applied force.",
       "extras": {
@@ -3427,6 +3568,9 @@
           "fr": "Fréquence"
         }
       }
+    },
+    "imu-6d": {
+      "description": "To record a 6 degrees of freedom Intertial Measurement Unit (IMU) measurement"
     },
     "length": {
       "description": "Length measurements. Format = unit.",
@@ -3523,6 +3667,9 @@
           "fr": "Ratio"
         }
       }
+    },
+    "record": {
+      "description": "A record is a grouping of events associated to the same measurement"
     },
     "speed": {
       "description": "The magnitude of the velocity of an object.",
