@@ -501,6 +501,29 @@
       },
       "description": "The capacity of a physical system to perform work."
     },
+    "external-reference": {
+      "description": "To reference a user in an external app/service.",
+      "formats": {
+        "kino-research": {
+          "description": "Reference in kino-research app",
+          "type": "object",
+          "properties": {
+            "studyCode": {
+              "description": "The code of the study",
+              "type": "string"
+            },
+            "subjectCode": {
+              "description": "The code of the subject",
+              "type": "string"
+            }
+          },
+          "required": [
+            "studyCode",
+            "subjectCode"
+          ]
+        }
+      }
+    },
     "file": {
       "description": "To record a file, or a group of files. A fallback type for data with no specific handling in Pryv.",
       "formats": {

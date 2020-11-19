@@ -1,0 +1,25 @@
+{
+  "external-reference": {
+    "description": "To reference a user in an external app/service.",
+    "formats": {
+      "kino-research": {
+        "description": "Reference in kino-research app",
+        "type": "object",
+        "properties": {
+          "studyCode": {
+            "description": "The code of the study",
+            "type": "string"
+          },
+          "subjectCode": {
+            "description": "The code of the subject",
+            "type": "string"
+          }
+        },
+        "required": [
+          "studyCode",
+          "subjectCode"
+        ]
+      }
+    }
+  }
+}
