@@ -1928,6 +1928,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "record": {
       "description": "A record is a grouping of events associated to the same measurement",
       "formats": {
@@ -1972,6 +1973,8 @@
         }
       }
     },
+=======
+>>>>>>> upstream/master
     "reproductive-health": {
       "description": "To record reproductive health data, such as menstrual flow or ovulation test results.",
       "formats": {
