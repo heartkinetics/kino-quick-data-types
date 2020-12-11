@@ -19,6 +19,19 @@
           "studyCode",
           "subjectCode"
         ]
+      },
+      "firebase-cloud-messaging": {
+        "description": "FCM token",
+        "type": "object",
+        "properties": {
+          "token": {
+            "description": "Token",
+            "type": "string"
+          }
+        },
+        "required": [
+          "token"
+        ]
       }
     }
   }

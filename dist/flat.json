@@ -525,6 +525,19 @@
         "subjectCode"
       ]
     },
+    "external-reference/firebase-cloud-messaging": {
+      "description": "FCM token",
+      "type": "object",
+      "properties": {
+        "token": {
+          "description": "Token",
+          "type": "string"
+        }
+      },
+      "required": [
+        "token"
+      ]
+    },
     "file/attached": {
       "description": "The file is attached to the event",
       "type": "null",
