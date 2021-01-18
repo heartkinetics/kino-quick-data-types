@@ -40,6 +40,45 @@
           "weight",
           "phone"
         ]
+      },
+      "summary": {
+        "description": "Summary data of the record",
+        "type": "object",
+        "properties": {
+          "quality": {
+            "description": "Quality of the record",
+            "type": "number"
+          },
+          "heartRate": {
+            "description": "Heartrate of the subject",
+            "type": "number" 
+          },
+          "metric": {
+            "description": "Summary metric",
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": "number"
+              },
+              "units": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "value",
+              "units",
+              "label"
+            ]
+          }
+        },
+        "required": [
+          "quality",
+          "heartRate",
+          "metric"
+        ]
       }
     }
   }
