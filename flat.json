@@ -1477,6 +1477,32 @@
         "id"
       ]
     },
+    "news/banner": {
+      "description": "News banner",
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "link": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "embedded",
+            "redirect"
+          ]
+        }
+      },
+      "required": [
+        "title",
+        "text"
+      ]
+    },
     "note/html": {
       "description": "An HTML-formatted note.",
       "type": "string",
@@ -3986,6 +4012,9 @@
     },
     "music": {
       "description": "To record references to music, usualy tracks (from Soundcloud, Shazam tags, etc.)."
+    },
+    "news": {
+      "description": "News"
     },
     "note": {
       "description": "To record different kinds of text-based notes, from simple text to more complex formatted content like social network posts."
