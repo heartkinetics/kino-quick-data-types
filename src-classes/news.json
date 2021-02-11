@@ -1,0 +1,30 @@
+{
+  "news": {
+    "description": "News",
+    "formats": {
+      "banner": {
+        "description": "News banner",
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "link": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["embedded", "redirect"]
+          }
+        },
+        "required": [
+          "title",
+          "text"
+        ]
+      }
+    }
+  }
+}
